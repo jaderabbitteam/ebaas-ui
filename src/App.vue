@@ -1,19 +1,19 @@
 <template>
-  <div id="app">
+<div id="app">
     <!-- <img src="./assets/logo.png"> -->
-    <router-view v-wechat-title="$route.meta.title"/>
-  </div>
+    <router-view v-wechat-title="$route.meta.title" />
+</div>
 </template>
 
 <script>
 export default {
-  name: 'App'
+    name: 'App'
 }
 </script>
 
 <style>
-*{
-      margin: 0;
-      padding: 0;
-    }
+* {
+    margin: 0;
+    padding: 0;
+}
 </style>

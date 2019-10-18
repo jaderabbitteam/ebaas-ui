@@ -1,14 +1,14 @@
 <template>
-  <div>
-      白名单
-  </div>
+<div>
+    白名单
+</div>
 </template>
 
 <script>
 export default {
-    name:"white",
-    data(){
-        return{
+    name: "white",
+    data() {
+        return {
 
         }
     }

@@ -1,14 +1,14 @@
 <template>
-  <div>
-      区块链百科
-  </div>
+<div>
+    区块链百科
+</div>
 </template>
 
 <script>
 export default {
-    name:"Encyclopedias",
-    data(){
-        return{
+    name: "Encyclopedias",
+    data() {
+        return {
 
         }
     }

@@ -1,14 +1,14 @@
 <template>
-  <div>
-      消息页面
-  </div>
+<div>
+    消息页面
+</div>
 </template>
 
 <script>
 export default {
-    name:"news",
-    data(){
-        return{
+    name: "news",
+    data() {
+        return {
 
         }
     }
