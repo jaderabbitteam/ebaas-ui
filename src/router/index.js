@@ -31,36 +31,70 @@ export default new Router({
       children:[{
         path: "home",
         component: home,
+        meta:{
+          title: "易链EBaaS - 运维主页"
+        },
+        
       },{
         path: "link",
         component: link,
+        meta:{
+          title: "易链EBaaS - 业务链管理"
+        },
       },{
         path: "work",
         component: work,
+        meta:{
+          title: "易链EBaaS - 业务管理"
+        },
       },{
         path: "node_management",
         component: node_management,
+        meta:{
+          title: "易链EbaaS - 节点管理"
+        },
       },{
         path: "white",
         component: white,
+        meta:{
+          title: "易链EbaaS - 白名单"
+        },
       },{
         path: "black",
         component: black,
+        meta:{
+          title: "易链EbaaS - 黑名单"
+        },
       },{
         path: "algorithm",
         component: algorithm,
+        meta:{
+          title: "易链EbaaS - 链码打包、安装、升级说明"
+        },
       },{
         path: "encyclopedias",
         component: encyclopedias,
+        meta:{
+          title: "易链EbaaS - 区块链百科"
+        },
       },{
         path: "development",
         component: development,
+        meta:{
+          title: "易链EbaaS - 开发手册"
+        },
       },{
         path: "news",
         component: news,
+        meta:{
+          title: "易链EbaaS - 业务员主页"
+        },
       },{
         path: "user_manage",
         component: user_manage,
+        meta:{
+          title: "易链EbaaS - 用户管理"
+        },
       }]
     }
   ]
