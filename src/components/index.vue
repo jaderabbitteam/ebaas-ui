@@ -42,12 +42,21 @@
 </template>
 
 <script>
+import {
+    api
+} from '@/services'
+
 export default {
   name: 'index',
   data () {
     return {
 
     }
+  },
+  methods:{
+      async login(){
+          const u=await api.user()
+      }
   }
 }
 </script>
