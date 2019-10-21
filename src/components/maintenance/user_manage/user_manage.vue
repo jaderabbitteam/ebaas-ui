@@ -6,12 +6,12 @@
 
 <script>
 export default {
-    name: "user_manage",
-    data() {
-        return {
+  name: 'user_manage',
+  data () {
+    return {
 
-        }
     }
+  }
 }
 </script>
 

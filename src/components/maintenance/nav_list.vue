@@ -91,15 +91,15 @@
 
 <script>
 export default {
-    name: "nav_list",
-    data() {
-        return {
-
-        }
-    },
-    methods: {
+  name: 'nav_list',
+  data () {
+    return {
 
     }
+  },
+  methods: {
+
+  }
 }
 </script>
 

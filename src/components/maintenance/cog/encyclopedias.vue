@@ -6,12 +6,12 @@
 
 <script>
 export default {
-    name: "Encyclopedias",
-    data() {
-        return {
+  name: 'Encyclopedias',
+  data () {
+    return {
 
-        }
     }
+  }
 }
 </script>
 
