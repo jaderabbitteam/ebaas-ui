@@ -7,5 +7,7 @@ const baseUrl = 'http://192.168.34.134:8080/v1'
 export const user = () => http.get(baseUrl + 'user/login/rabbit-root/root', {
     params: {}
 }).then(data => {
+    console.log(data);
+    
     return data
 })
