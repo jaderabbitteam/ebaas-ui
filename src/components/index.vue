@@ -17,15 +17,15 @@
 
                     <div class="username">
                         <img src="../../static/images/user_login_icon.png" alt="">
-                        <input type="text" placeholder="请输入您的用户名">
+                        <input type="text" placeholder="请输入您的用户名" v-model = "userName">
                     </div>
 
                     <div class="password">
                         <img src="../../static/images/user_psd_icon.png" alt="">
-                        <input type="password" placeholder="请输入您的密码">
+                        <input type="password" placeholder="请输入您的密码" v-model = "passWord">
                     </div>
 
-                    <div class="submit">
+                    <div @click = "login" class="submit">
                         <input type="submit" value="立即登陆">
                         <p>登录失败</p>
                     </div>
@@ -50,18 +50,27 @@ export default {
   name: 'index',
   data () {
     return {
-
+        userName: "",
+        passWord: ""
     }
   },
   methods:{
     //   async login(){
     //       const u=await api.user()
     //   }
+    async login(){
+        if(this.userName == ""  || this.password == ""){
+            alert("账号密码不能为空")
+            return
+        }
+        
+        const u = await api.user()
+    }
   }
 }
 </script>
 
-<style scoped>
+<style >
 * {
     margin: 0;
     padding: 0;
@@ -131,11 +140,26 @@ export default {
 .body_bg .content .content_right form .username,
 .body_bg .content .content_right form .password {
     overflow: hidden;
+    display: flex;
+    margin-top: 30px;
 }
 
 .form img {
     position: relative;
     top: 7px;
+    width: 20px;
+    height: 25px;
+    margin-right: 10px;
+}
+
+/* .body_bg .content .content_right form .username img{
+    margin-top: 30px;
+} */
+
+.body_bg .content .content_right form .submit{
+    margin-top: 25px;
+    position: relative;
+    height: 50px;
 }
 
 .body_bg .content .content_right form .username input,
@@ -159,9 +183,9 @@ export default {
     line-height: 20px;
 }
 
-.body_bg .content .content_right form .username input {
+/* .body_bg .content .content_right form .username input {
     margin-top: 30px;
-}
+} */
 
 input::-webkit-input-placeholder {
     color: #bbb;
@@ -169,6 +193,9 @@ input::-webkit-input-placeholder {
 }
 
 .body_bg .content .content_right form .submit input {
+    position: absolute;
+    top: 0;
+    height: 100%;
     margin-left: 20px;
     background: #109BBE;
     font-size: 14px;
@@ -176,7 +203,16 @@ input::-webkit-input-placeholder {
     cursor: pointer;
 }
 
+.body_bg .content .content_right form .register{
+    margin-top: 10px;
+    position: relative;
+    height: 50px;
+}
+
 .body_bg .content .content_right form .register a {
+    position: absolute;
+    top: 0;
+    line-height: 50px;
     /* display: block; */
     text-align: center;
     margin-left: 44%;
