@@ -54,9 +54,9 @@ export default {
     }
   },
   methods:{
-      async login(){
-          const u=await api.user()
-      }
+    //   async login(){
+    //       const u=await api.user()
+    //   }
   }
 }
 </script>
