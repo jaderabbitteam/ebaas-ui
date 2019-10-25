@@ -55,7 +55,7 @@ export default {
         }
     },
     methods: {
-        login() {
+        async login() {
             if (this.userName == "") {
                 alert('账号不能为空!');
                 return
@@ -64,8 +64,13 @@ export default {
                 alert('密码不能为空!');
                 return
             }
-            var aa=api.user(this.userName, this.passWord);
-            console.log(aa)
+            const data = await api.user(this.userName, this.passWord).catch(err => {
+                console.log(err)
+
+                return null
+            })
+            console.log(data)
+            console.log(data.txID)
         }
     }
 }

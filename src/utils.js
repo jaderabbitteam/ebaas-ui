@@ -150,3 +150,5 @@ export const currency = (value, currency, decimals) => {
         _int.slice(i).replace(digitsRE, '$1,') +
         _float
 }
+
+http.param = (url, data) => Object.keys(data).reduce((p, k) => p.replace(':' + k, data[k]), url)
