@@ -1,13 +1,8 @@
 import { http } from '@/utils'
 
-const baseUrl = 'http://183.6.121.188:19281/v1'
+const baseUrl = 'http://192.168.34.138:8080/v1'
 
 
-// 审核状态
-export const user = () => http.get(baseUrl + '/user/?userName=yanshi-zhangsan&password=123', {
-    params: {}
-}).then(data => {
-    console.log(data);
-
+export const user = (userName, passWord) => http.get(baseUrl + '/user/login/:userName/:passWord'.replace(':userName', userName).replace(':passWord', passWord)).then(data => {
     return data
 })

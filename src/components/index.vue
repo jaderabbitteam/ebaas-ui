@@ -17,15 +17,15 @@
 
                     <div class="username">
                         <img src="../../static/images/user_login_icon.png" alt="">
-                        <input type="text" placeholder="请输入您的用户名" v-model = "userName">
+                        <input type="text" placeholder="请输入您的用户名" v-model="userName">
                     </div>
 
                     <div class="password">
                         <img src="../../static/images/user_psd_icon.png" alt="">
-                        <input type="password" placeholder="请输入您的密码" v-model = "passWord">
+                        <input type="password" placeholder="请输入您的密码" v-model="passWord">
                     </div>
 
-                    <div @click = "login" class="submit">
+                    <div @click="login" class="submit">
                         <input type="submit" value="立即登陆">
                         <p>登录失败</p>
                     </div>
@@ -47,30 +47,31 @@ import {
 } from '@/services'
 
 export default {
-  name: 'index',
-  data () {
-    return {
-        userName: "",
-        passWord: ""
-    }
-  },
-  methods:{
-    //   async login(){
-    //       const u=await api.user()
-    //   }
-    async login(){
-        if(this.userName == ""  || this.password == ""){
-            alert("账号密码不能为空")
-            return
+    name: 'index',
+    data() {
+        return {
+            userName: "",
+            passWord: ""
         }
-        
-        const u = await api.user()
+    },
+    methods: {
+        login() {
+            if (this.userName == "") {
+                alert('账号不能为空!');
+                return
+            }
+            if (this.passWord == "") {
+                alert('密码不能为空!');
+                return
+            }
+            var aa=api.user(this.userName, this.passWord);
+            console.log(aa)
+        }
     }
-  }
 }
 </script>
 
-<style >
+<style>
 * {
     margin: 0;
     padding: 0;
@@ -156,7 +157,7 @@ export default {
     margin-top: 30px;
 } */
 
-.body_bg .content .content_right form .submit{
+.body_bg .content .content_right form .submit {
     margin-top: 25px;
     position: relative;
     height: 50px;
@@ -203,7 +204,7 @@ input::-webkit-input-placeholder {
     cursor: pointer;
 }
 
-.body_bg .content .content_right form .register{
+.body_bg .content .content_right form .register {
     margin-top: 10px;
     position: relative;
     height: 50px;
