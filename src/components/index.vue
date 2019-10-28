@@ -234,7 +234,6 @@ input::-webkit-input-placeholder {
     position: absolute;
     top: 0;
     line-height: 50px;
-    /* display: block; */
     text-align: center;
     margin-left: 44%;
     color: #fff;
