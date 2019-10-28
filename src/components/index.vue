@@ -27,7 +27,8 @@
 
                     <div @click="login" class="submit">
                         <input type="submit" value="立即登陆">
-                        <p>登录失败</p>
+                        <p v-if="show_1">账号密码错误，登录失败</p>
+                        <p v-if="show_2">帐号或密码不能为空</p>
                     </div>
 
                     <div class="register">
@@ -51,26 +52,53 @@ export default {
     data() {
         return {
             userName: "",
-            passWord: ""
+            passWord: "",
+            show_1: false,
+            show_2: false
         }
     },
     methods: {
         async login() {
-            if (this.userName == "") {
-                alert('账号不能为空!');
+            if (this.userName == "" && this.passWord == "") {
+                this.show_2 = true;
                 return
             }
-            if (this.passWord == "") {
-                alert('密码不能为空!');
-                return
-            }
+
             const data = await api.user(this.userName, this.passWord).catch(err => {
                 console.log(err)
 
                 return null
             })
-            console.log(data)
-            console.log(data.txID)
+
+            if(data){
+                console.log('成功');
+                location.href = 'http://localhost:8080/?#/maintenance';
+            }
+            else{
+                console.log('失败');
+                this.show_1 = true;
+                this.show_2 = false;
+            }
+
+
+            // await api.user(this.userName, this.passWord).then(function (response) {  
+            //     if(response){
+            //         console.log('成功');
+                    
+            //     }
+            //     else{
+            //         console.log('失败');
+                    
+            //     }
+                
+            // })
+            // console.log(api.user(this.userName, this.passWord));
+            
+
+
+            // console.log(data)
+            
+            // console.log(data.txID)
         }
     }
 }
@@ -125,7 +153,7 @@ export default {
 .body_bg .content .content_right {
     position: absolute;
     width: 400px;
-    height: 350px;
+    height: 400px;
     margin-left: 60%;
     margin-top: 13%;
     background: #0D4A99;
@@ -184,9 +212,12 @@ export default {
 .body_bg .content .content_right form .submit p {
     height: 20px;
     text-align: center;
+    font-family: '微软雅黑';
     color: red;
-    display: none;
+    display: block;
+    font-size: 26px;
     line-height: 20px;
+    padding-top: 120px;
 }
 
 /* .body_bg .content .content_right form .username input {
