@@ -28,7 +28,7 @@
                     <div @click="login" class="submit">
                         <input type="submit" value="立即登陆">
                         <p v-if="show_1">账号密码错误，登录失败</p>
-                        <p v-if="show_2">帐号或密码不能为空</p>
+                        <p v-if="show_2">账号密码为空，登陆失败</p>
                     </div>
 
                     <div class="register">
@@ -59,7 +59,8 @@ export default {
     },
     methods: {
         async login() {
-            if (this.userName == "" && this.passWord == "") {
+            if (this.userName == "") {
+                this.show_1 = false;
                 this.show_2 = true;
                 return
             }
@@ -69,35 +70,18 @@ export default {
 
                 return null
             })
-
             if(data){
                 console.log('成功');
                 location.href = 'http://localhost:8080/?#/maintenance';
+                
             }
             else{
                 console.log('失败');
-                this.show_1 = true;
                 this.show_2 = false;
-            }
-
-
-            // await api.user(this.userName, this.passWord).then(function (response) {  
-            //     if(response){
-            //         console.log('成功');
-                    
-            //     }
-            //     else{
-            //         console.log('失败');
-                    
-            //     }
+                this.show_1 = true;
                 
-            // })
-            // console.log(api.user(this.userName, this.passWord));
-            
-
-
+            }
             // console.log(data)
-            
             // console.log(data.txID)
         }
     }
@@ -212,11 +196,11 @@ export default {
 .body_bg .content .content_right form .submit p {
     height: 20px;
     text-align: center;
-    font-family: '微软雅黑';
     color: red;
     display: block;
-    font-size: 26px;
     line-height: 20px;
+    font-family: '微软雅黑';
+    font-size: 26px;
     padding-top: 120px;
 }
 
@@ -250,7 +234,6 @@ input::-webkit-input-placeholder {
     position: absolute;
     top: 0;
     line-height: 50px;
-    /* display: block; */
     text-align: center;
     margin-left: 44%;
     color: #fff;
