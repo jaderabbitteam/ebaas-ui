@@ -27,64 +27,66 @@
         </div>
     </div>
 
-    <div class="left">
-        <ul>
-            <li>
-                <span>
-                    <router-link to="../maintenance/home">主页</router-link>
-                </span>
-            </li>
-            <li>
-                <span>系统管理</span>
+    <div class="content">
+            <div class="left">
                 <ul>
                     <li>
                         <span>
-                            <router-link to="../maintenance/node_management">节点管理</router-link>
+                            <router-link to="../maintenance/home">主页</router-link>
                         </span>
                     </li>
                     <li>
-                        <span>
-                            <router-link to="../maintenance/black">黑名单</router-link>
-                        </span>
-                    </li>
-                    <li>
-                        <span>
-                            <router-link to="../maintenance/white">白名单</router-link>
-                        </span>
-                    </li>
-                    <li>
-                        <span>
-                            <router-link to="../maintenance/algorithm">共识算法</router-link>
-                        </span>
-                    </li>
-                    <li>
-                        <span>
-                            <router-link to="../maintenance/encyclopedias">区块链百科</router-link>
-                        </span>
-                    </li>
-                    <li>
-                        <span>
-                            <router-link to="../maintenance/development">开发手册</router-link>
-                        </span>
-                    </li>
+                        <span>系统管理</span>
+                        <ul>
+                            <li>
+                                <span>
+                                    <router-link to="../maintenance/node_management">节点管理</router-link>
+                                </span>
+                            </li>
+                            <li>
+                                <span>
+                                    <router-link to="../maintenance/black">黑名单</router-link>
+                                </span>
+                            </li>
+                            <li>
+                                <span>
+                                    <router-link to="../maintenance/white">白名单</router-link>
+                                </span>
+                            </li>
+                            <li>
+                                <span>
+                                    <router-link to="../maintenance/algorithm">共识算法</router-link>
+                                </span>
+                            </li>
+                            <li>
+                                <span>
+                                    <router-link to="../maintenance/encyclopedias">区块链百科</router-link>
+                                </span>
+                            </li>
+                            <li>
+                                <span>
+                                    <router-link to="../maintenance/development">开发手册</router-link>
+                                </span>
+                            </li>
 
+                        </ul>
+                    </li>
+                    <li>
+                        <span>
+                            <router-link to="../maintenance/link">业务链管理</router-link>
+                        </span>
+                    </li>
+                    <li>
+                        <span>
+                            <router-link to="../maintenance/work">业务管理</router-link>
+                        </span>
+                    </li>
                 </ul>
-            </li>
-            <li>
-                <span>
-                    <router-link to="../maintenance/link">业务链管理</router-link>
-                </span>
-            </li>
-            <li>
-                <span>
-                    <router-link to="../maintenance/work">业务管理</router-link>
-                </span>
-            </li>
-        </ul>
-    </div>
+            </div>
 
-    <div class="right">
-        <router-view></router-view>
+            <div class="right">
+                <router-view></router-view>
+            </div>
     </div>
 </div>
 </template>
@@ -104,6 +106,7 @@ export default {
 </script>
 
 <style scoped>
+
 .top {
     width: 100%;
     height: 62px;
@@ -235,16 +238,21 @@ export default {
 .top .user .user_right .user_functions p:nth-of-type(2) span:hover {
     text-decoration: underline;
 }
-
+.content{
+    /* position: relative; */
+}
 .left {
     box-sizing: border-box;
     position: absolute;
     width: 200px;
     background: #323232;
     border-right: 15px solid #2A2A2A;
-    height: 100%;
+    min-height: 100%;
+    height: auto;
     top: 0;
     z-index: -1;
+    /* padding-bottom: 9999px;
+    margin-bottom: -9999px; */
 }
 
 .left>ul {
@@ -336,8 +344,15 @@ export default {
 }
 
 .right {
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
     position: absolute;
-    margin-left: 200px;
+    padding-left: 200px;
+    padding-top: 62px;
+    top: 0px;
+    background: #ECECEC;
+    z-index: -100;
 }
 
 /* .left>ul>li:nth-of-type(2):hover{

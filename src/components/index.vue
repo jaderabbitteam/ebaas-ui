@@ -72,7 +72,7 @@ export default {
             })
             if(data){
                 console.log('成功');
-                location.href = 'http://localhost:8080/?#/maintenance';
+                location.href = 'http://localhost:8080/?#/maintenance/home';
                 
             }
             else{
