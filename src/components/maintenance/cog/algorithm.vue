@@ -15,7 +15,7 @@
             <p>共识算法：&nbsp;solo</p>
             <p><a href="#">认识共识算法</a></p>
             <p>简介：&nbsp;solo共识算法非常简单，单点共识解决方案。它接受交易，对其进行排序，然后生成块，进行上链</p>
-            <img src="../../../../static/images/solo.png" alt="" width="800">
+            <img src="../../../../static/images/solo.png" alt="" width="90%">
 
           </div>
 
@@ -46,7 +46,8 @@ export default {
   }
   .banner{
     widows: 90%;
-    height: 500px;
+    width: 65%;
+    /* height: 500px; */
     margin: 3% 5%;
     /* background: #f2f; */
   }
@@ -105,7 +106,7 @@ export default {
   }
   .down{
     width: 100%;
-    height: 400px;
+    /* height: 400px; */
     /* background: skyblue; */
     margin-top: 30px;
     z-index: -10;
@@ -148,6 +149,9 @@ export default {
     border-left: 3px solid #323232;
     border-right: 3px solid #323232;
     border-bottom: 1px solid #323232;
+  }
+  .algorithm_content p{
+    line-height: 50px;
   }
   .algorithm_content p:nth-of-type(1),
   .algorithm_content p:nth-of-type(5){

@@ -65,7 +65,7 @@ export default {
   }
   .banner{
     widows: 90%;
-    height: 500px;
+    /* height: 500px; */
     margin: 3% 5%;
     /* background: #f2f; */
   }
@@ -124,7 +124,7 @@ export default {
   }
   .down{
     width: 100%;
-    height: 400px;
+    /* height: 400px; */
     /* background: skyblue; */
     margin-top: 30px;
     z-index: -10;
