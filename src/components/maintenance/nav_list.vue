@@ -108,6 +108,7 @@ export default {
 <style scoped>
 
 .top {
+    position: absolute;
     width: 100%;
     height: 62px;
     background: #323232;
@@ -240,17 +241,23 @@ export default {
 }
 .content{
     /* position: relative; */
+    position: absolute;
+    /* overflow: hidden; */
+    min-height: 100%;
+    width: 100%;
+    /* height: 100%; */
 }
 .left {
     box-sizing: border-box;
     position: absolute;
+    /* position: relative; */
     width: 200px;
     background: #323232;
     border-right: 15px solid #2A2A2A;
     min-height: 100%;
     height: auto;
     top: 0;
-    z-index: -1;
+    z-index: 1;
     /* padding-bottom: 9999px;
     margin-bottom: -9999px; */
 }
@@ -346,13 +353,16 @@ export default {
 .right {
     box-sizing: border-box;
     width: 100%;
-    height: 100%;
-    position: absolute;
-    padding-left: 200px;
-    padding-top: 62px;
+    min-height: 100%;
+    margin-left: 200px;
+    /* height: 100%; */
+    /* position: absolute; */
+    position: relative;
+    /* padding-left: 120px; */
+    padding-top: 60px;
     top: 0px;
     background: #ECECEC;
-    z-index: -100;
+    /* z-index: -100; */
 }
 
 /* .left>ul>li:nth-of-type(2):hover{
