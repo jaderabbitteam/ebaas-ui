@@ -1,14 +1,14 @@
 <template>
 <div class="home_body">
-   <div class="banner">
+   <div class="work_banner">
 
-        <div class="down">
-          <div class="head">
+        <div class="work_down">
+          <div class="work_head">
             <span>
               业务管理>>
             </span>
           </div>
-          <div class="new_black">
+          <div class="work_new_black">
 
               <span>新增</span>
 
@@ -63,7 +63,7 @@ export default {
   .home_body{
     background: #ECECEC;
   }
-  .banner{
+  .work_banner{
     widows: 90%;
     /* height: 500px; */
     margin: 3% 5%;
@@ -122,14 +122,14 @@ export default {
   span>.right p{
     font-size: 13px;
   }
-  .down{
+  .work_down{
     width: 100%;
     height: 400px;
     /* background: skyblue; */
     margin-top: 30px;
     z-index: -10;
   }
-  .down .head{
+  .work_down .work_head{
     position: relative;
     overflow: hidden;
     width: 100%;
@@ -137,7 +137,7 @@ export default {
     background: #323232;
     border-radius: 8px;
   }
-  .down .head>span{
+  .work_down .work_head>span{
     position: absolute;
     display: block;
     width: 96%;
@@ -152,19 +152,19 @@ export default {
     line-height: 24px;
     padding-left: 32px;
   }
-  .down table{
+  .work_down table{
     width: 100%;
     height: 100px;
     background: #ccc;
   }
-  .new_black{
+  .work_new_black{
     height: 40px;
     width: 100%;
     background: #F2F2F2;
     font-size: 14px;
     line-height: 40px;
   }
-  .new_black span{
+  .work_new_black span{
     box-sizing: border-box;
     display: block;
     height: 100%;
