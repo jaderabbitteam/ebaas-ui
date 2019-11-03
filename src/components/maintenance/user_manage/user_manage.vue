@@ -1,14 +1,14 @@
 <template>
 <div class="home_body">
-   <div class="banner">
+   <div class="user_banner">
 
-        <div class="down">
-          <div class="head">
+        <div class="user_down">
+          <div class="user_head">
             <span>
               用户信息
             </span>
           </div>
-          <div class="algorithm_content">
+          <div class="user_content">
 
            <p>用户名：</p>
            <p>密码：</p>
@@ -23,13 +23,13 @@
         </div>
 
 
-        <div class="down">
-          <div class="head">
+        <div class="user_down">
+          <div class="user_head">
             <span>
               机构信息
             </span>
           </div>
-          <div class="algorithm_content jigouxinxi">
+          <div class="user_content jigouxinxi">
 
            <div class="left">
              <p>机构名称：</p>
@@ -75,7 +75,7 @@ export default {
   .home_body{
     background: #ECECEC;
   }
-  .banner{
+  .user_banner{
     widows: 90%;
     width: 65%;
     /* height: 500px; */
@@ -135,14 +135,14 @@ export default {
   span>.right p{
     font-size: 13px;
   }
-  .down{
+  .user_down{
     width: 100%;
     /* height: 400px; */
     /* background: skyblue; */
     margin-top: 30px;
     z-index: -10;
   }
-  .down .head{
+  .user_down .user_head{
     position: relative;
     overflow: hidden;
     width: 100%;
@@ -150,7 +150,7 @@ export default {
     background: #323232;
     border-radius: 8px 8px 0 0;
   }
-  .down .head>span{
+  .user_down .user_head>span{
     position: absolute;
     display: block;
     width: 96%;
@@ -165,12 +165,12 @@ export default {
     line-height: 24px;
     padding-left: 32px;
   }
-  .down table{
+  .user_down table{
     width: 100%;
     height: 100px;
     background: #ccc;
   }
-  .algorithm_content{
+  .user_content{
     position: relative;
     box-sizing: border-box;
     padding: 20px 100px;
@@ -183,22 +183,22 @@ export default {
     border-right: 3px solid #323232;
     border-bottom: 2px solid #323232;
   }
-  .algorithm_content>p:nth-of-type(2){
+  .user_content>p:nth-of-type(2){
     text-indent: 1em;
   }
-  .algorithm_content .left{
+  .user_content .left{
     width: 65%;
     float: left;
   }
-  .algorithm_content .right{
+  .user_content .right{
     width: 35%;
     float: left;
   }
-  .algorithm_content .left>p:nth-of-type(3){
+  .user_content .left>p:nth-of-type(3){
     text-indent: 1em;
   }
-  .algorithm_content .right>p:nth-of-type(1),
-  .algorithm_content .right>p:nth-of-type(2){
+  .user_content .right>p:nth-of-type(1),
+  .user_content .right>p:nth-of-type(2){
     text-indent: 1em;
   }
   .jigouxinxi{
