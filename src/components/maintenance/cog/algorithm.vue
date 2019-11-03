@@ -1,9 +1,9 @@
 <template>
 <div class="home_body">
-   <div class="banner">
+   <div class="alg_banner">
 
-        <div class="down">
-          <div class="head">
+        <div class="alg_down">
+          <div class="alg_head">
             <span>
               共识算法
             </span>
@@ -44,7 +44,7 @@ export default {
   .home_body{
     background: #ECECEC;
   }
-  .banner{
+  .alg_banner{
     widows: 90%;
     width: 65%;
     /* height: 500px; */
@@ -104,14 +104,14 @@ export default {
   span>.right p{
     font-size: 13px;
   }
-  .down{
+  .alg_down{
     width: 100%;
     /* height: 400px; */
     /* background: skyblue; */
     margin-top: 30px;
     z-index: -10;
   }
-  .down .head{
+  .alg_down .alg_head{
     position: relative;
     overflow: hidden;
     width: 100%;
@@ -119,7 +119,7 @@ export default {
     background: #323232;
     border-radius: 8px 8px 0 0;
   }
-  .down .head>span{
+  .alg_down .alg_head>span{
     position: absolute;
     display: block;
     width: 96%;
@@ -134,7 +134,7 @@ export default {
     line-height: 24px;
     padding-left: 32px;
   }
-  .down table{
+  .alg_down table{
     width: 100%;
     height: 100px;
     background: #ccc;
