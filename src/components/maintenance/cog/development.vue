@@ -1,14 +1,14 @@
 <template>
 <div class="home_body">
-   <div class="banner">
+   <div class="dev_banner">
 
-        <div class="down">
-          <div class="head">
+        <div class="dev_down">
+          <div class="dev_head">
             <span>
               共识算法
             </span>
           </div>
-          <div class="algorithm_content">
+          <div class="dev_content">
             <h1>什么是Chaincode</h1>
             <p>
               Chaincode是一段由Go语言编写（支持其他编程语言，如Java），并能实现预定义接口的程序。
@@ -217,7 +217,7 @@ export default {
   .home_body{
     background: #ECECEC;
   }
-  .banner{
+  .dev_banner{
     widows: 90%;
     /* height: 500px; */
     margin: 3% 5%;
@@ -276,14 +276,14 @@ export default {
   span>.right p{
     font-size: 13px;
   }
-  .down{
+  .dev_down{
     width: 100%;
     /* height: 400px; */
     /* background: skyblue; */
     margin-top: 30px;
     z-index: -10;
   }
-  .down .head{
+  .dev_down .dev_head{
     position: relative;
     overflow: hidden;
     width: 100%;
@@ -291,7 +291,7 @@ export default {
     background: #323232;
     border-radius: 8px 8px 0 0;
   }
-  .down .head>span{
+  .dev_down .dev_head>span{
     position: absolute;
     display: block;
     width: 96%;
@@ -306,12 +306,12 @@ export default {
     line-height: 24px;
     padding-left: 32px;
   }
-  .down table{
+  .dev_down table{
     width: 100%;
     height: 100px;
     background: #ccc;
   }
-  .algorithm_content{
+  .dev_content{
     box-sizing: border-box;
     padding: 20px 30px;
     width: 100%;
@@ -322,32 +322,32 @@ export default {
     border-right: 3px solid #323232;
     border-bottom: 1px solid #323232;
   }
-  .algorithm_content p{
+  .dev_content p{
     line-height: 50px;
   }
-  .algorithm_content p:nth-of-type(4),
-  .algorithm_content p:nth-of-type(6),
-  .algorithm_content p:nth-of-type(13),
-  .algorithm_content p:nth-of-type(32),
-  .algorithm_content p:nth-of-type(35),
-  .algorithm_content p:nth-of-type(37),
-  .algorithm_content p:nth-of-type(41){
+  .dev_content p:nth-of-type(4),
+  .dev_content p:nth-of-type(6),
+  .dev_content p:nth-of-type(13),
+  .dev_content p:nth-of-type(32),
+  .dev_content p:nth-of-type(35),
+  .dev_content p:nth-of-type(37),
+  .dev_content p:nth-of-type(41){
     line-height: 20px;
   }
-  .algorithm_content h1 p:nth-of-type(2),
-  .algorithm_content h1 p:nth-of-type(4){
+  .dev_content h1 p:nth-of-type(2),
+  .dev_content h1 p:nth-of-type(4){
     line-height: 20px;
     margin: 10px 0;
   }
-  .algorithm_content h1{
+  .dev_content h1{
     font-size: 25px;
     margin: 10px 0;
   }
-  .algorithm_content h2{
+  .dev_content h2{
     font-size: 23px;
     margin: 10px 0;
   }
-  .algorithm_content h5{
+  .dev_content h5{
     font-size: 17px;
     margin: 10px 0;
   }
