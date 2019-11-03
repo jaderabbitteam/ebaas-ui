@@ -1,9 +1,9 @@
 <template>
 <div class="home_body">
-   <div class="banner">
+   <div class="news_banner">
 
-        <div class="down">
-          <div class="head">
+        <div class="news_down">
+          <div class="news_head">
             <span>
               待办
             </span>
@@ -70,7 +70,7 @@ export default {
   .home_body{
     background: #ECECEC;
   }
-  .banner{
+  .news_banner{
     widows: 90%;
     height: 100%;
     /* width: 65%; */
@@ -130,14 +130,14 @@ export default {
   span>.right p{
     font-size: 13px;
   }
-  .down{
+  .news_down{
     width: 100%;
     /* height: 400px; */
     /* background: skyblue; */
     margin-top: 30px;
     z-index: -10;
   }
-  .down .head{
+  .news_down .news_head{
     position: relative;
     overflow: hidden;
     width: 100%;
@@ -145,7 +145,7 @@ export default {
     background: #323232;
     border-radius: 8px;
   }
-  .down .head>span{
+  .news_down .news_head>span{
     position: absolute;
     display: block;
     width: 96%;
@@ -160,7 +160,7 @@ export default {
     line-height: 24px;
     padding-left: 32px;
   }
-  .down table{
+  .news_down table{
     width: 100%;
     height: 100px;
     background: #ccc;
