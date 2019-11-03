@@ -1,14 +1,14 @@
 <template>
 <div class="home_body">
-   <div class="banner">
+   <div class="link_banner">
 
-        <div class="down">
-          <div class="head">
+        <div class="link_down">
+          <div class="link_head">
             <span>
               业务链管理>>
             </span>
           </div>
-          <div class="new_black">
+          <div class="link_new_black">
 
               <span>新建链</span>
               <span>查看已安装链码</span>
@@ -101,7 +101,7 @@ export default {
   .home_body{
     background: #ECECEC;
   }
-  .banner{
+  .link_banner{
     widows: 90%;
     /* height: 500px; */
     margin: 3% 5%;
@@ -160,14 +160,14 @@ export default {
   span>.right p{
     font-size: 13px;
   }
-  .down{
+  .link_down{
     width: 100%;
     /* height: 400px; */
     /* background: skyblue; */
     margin-top: 30px;
     z-index: -10;
   }
-  .down .head{
+  .link_down .link_head{
     position: relative;
     overflow: hidden;
     width: 100%;
@@ -175,7 +175,7 @@ export default {
     background: #323232;
     border-radius: 8px;
   }
-  .down .head>span{
+  .link_down .link_head>span{
     position: absolute;
     display: block;
     width: 96%;
@@ -190,19 +190,19 @@ export default {
     line-height: 24px;
     padding-left: 32px;
   }
-  .down table{
+  .link_down table{
     width: 100%;
     height: 100px;
     background: #ccc;
   }
-  .new_black{
+  .link_new_black{
     height: 40px;
     width: 100%;
     background: #F2F2F2;
     font-size: 14px;
     line-height: 40px;
   }
-  .new_black span{
+  .link_new_black span{
     box-sizing: border-box;
     display: block;
     height: 100%;
