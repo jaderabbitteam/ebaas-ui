@@ -1,14 +1,14 @@
 <template>
 <div class="home_body">
-   <div class="banner">
+   <div class="ency_banner">
 
-        <div class="down">
+        <div class="ency_down">
           <div class="head">
             <span>
               共识算法
             </span>
           </div>
-          <div class="algorithm_content">
+          <div class="ency_content">
             <h1>区块链</h1>
             <p>区块链是分布式数据存储、点对点传输、共识机制、加密算法等计算机技术的新型应用模式。</p>
             <p>
@@ -114,7 +114,7 @@ export default {
   .home_body{
     background: #ECECEC;
   }
-  .banner{
+  .ency_banner{
     widows: 90%;
     /* height: 500px; */
     margin: 3% 5%;
@@ -173,14 +173,14 @@ export default {
   span>.right p{
     font-size: 13px;
   }
-  .down{
+  .ency_down{
     width: 100%;
     /* height: 400px; */
     /* background: skyblue; */
     margin-top: 30px;
     z-index: -10;
   }
-  .down .head{
+  .ency_down .head{
     position: relative;
     overflow: hidden;
     width: 100%;
@@ -188,7 +188,7 @@ export default {
     background: #323232;
     border-radius: 8px 8px 0 0;
   }
-  .down .head>span{
+  .ency_down .head>span{
     position: absolute;
     display: block;
     width: 96%;
@@ -203,12 +203,12 @@ export default {
     line-height: 24px;
     padding-left: 32px;
   }
-  .down table{
+  .ency_down table{
     width: 100%;
     height: 100px;
     background: #ccc;
   }
-  .algorithm_content{
+  .ency_content{
     box-sizing: border-box;
     padding: 20px 30px;
     width: 100%;
@@ -219,19 +219,19 @@ export default {
     border-right: 3px solid #323232;
     border-bottom: 1px solid #323232;
   }
-  .algorithm_content p{
+  .ency_content p{
     line-height: 45px;
   }
-  .algorithm_content p:nth-of-type(2),
-  .algorithm_content p:nth-of-type(4){
+  .ency_content p:nth-of-type(2),
+  .ency_content p:nth-of-type(4){
     line-height: 20px;
     margin: 10px 0;
   }
-  .algorithm_content h1{
+  .ency_content h1{
     font-size: 25px;
     margin: 10px 0;
   }
-  .algorithm_content h2{
+  .ency_content h2{
     font-size: 23px;
     margin: 10px 0;
 }
