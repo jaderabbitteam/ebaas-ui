@@ -1,9 +1,9 @@
 <template>
 <div class="home_body">
-   <div class="banner">
+   <div class="node_banner">
 
-        <div class="down">
-          <div class="head">
+        <div class="node_down">
+          <div class="node_head">
             <span>
               系统管理>>节点管理
             </span>
@@ -65,7 +65,7 @@ export default {
   .home_body{
     background: #ECECEC;
   }
-  .banner{
+  .node_banner{
     widows: 90%;
     height: 100%;
     margin: 3% 5%;
@@ -124,14 +124,14 @@ export default {
   span>.right p{
     font-size: 13px;
   }
-  .down{
+  .node_down{
     width: 100%;
     /* height: 400px; */
     /* background: skyblue; */
     margin-top: 30px;
     z-index: -10;
   }
-  .down .head{
+  .node_down .node_head{
     position: relative;
     overflow: hidden;
     width: 100%;
@@ -139,7 +139,7 @@ export default {
     background: #323232;
     border-radius: 8px;
   }
-  .down .head>span{
+  .node_down .node_head>span{
     position: absolute;
     display: block;
     width: 96%;
@@ -154,7 +154,7 @@ export default {
     line-height: 24px;
     padding-left: 32px;
   }
-  .down table{
+  .node_down table{
     width: 100%;
     height: 100px;
     background: #ccc;
