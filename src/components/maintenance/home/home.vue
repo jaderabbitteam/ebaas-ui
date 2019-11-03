@@ -1,38 +1,38 @@
 <template>
 <div class="home_body">
-   <div class="banner">
-        <div class="top">
+   <div class="home_banner">
+        <div class="home_top">
           <span>
-            <span class="left">
+            <span class="home_left">
               <img src="../../../../static/images/link.png" alt="">
             </span>
-            <span class="right">
+            <span class="home_right">
               <h1>3</h1>
               <p>业务链</p>
             </span>
           </span>
           <span>
-            <span class="left">
+            <span class="home_left">
               <img src="../../../../static/images/transmit.png" alt="">
             </span>
-            <span class="right">
+            <span class="home_right">
               <h1>1</h1>
               <p>节点</p>
             </span>
           </span>
           <span>
-            <span class="left">
+            <span class="home_left">
               <img src="../../../../static/images/cart_put.png" alt="">
             </span>
-            <span class="right">
+            <span class="home_right">
               <h1>3</h1>
               <p>TPS</p>
             </span>
           </span>
         </div>
 
-        <div class="down">
-          <div class="head">
+        <div class="home_down">
+          <div class="home_head">
             <span>
               业务链管理>>
             </span>
@@ -136,19 +136,23 @@ export default {
 <style scode>
   .home_body{
     background: #ECECEC;
+    height: 100%;
+    /* width: 100%;
+    box-sizing: border-box;
+    margin-left: 200px; */
   }
-  .banner{
+  .home_banner{
     width: 90%;
     /* height: 500px; */
     margin: 3% 5%;
     /* background: #f2f; */
   }
-  .top{
+  .home_top{
     width: 100%;
     height: 116px;
     /* background: #f9f; */
   }
-  .top>span{
+  .home_top>span{
     display: block;
     float: left;
     width: 250px;
@@ -157,17 +161,17 @@ export default {
     background: red;
     border-radius: 8px;
   }
-  .top>span:nth-of-type(1){
+  .home_top>span:nth-of-type(1){
     margin-left: 0;
     background: #607B8B;
   }
-  .top>span:nth-of-type(2){
+  .home_top>span:nth-of-type(2){
     background: #51A5C6;
   }
-  .top>span:nth-of-type(3){
+  .home_top>span:nth-of-type(3){
     background: #4A4A4A;
   }
-  span>.left{
+  span>.home_left{
     float: left;
     position: relative;
     display: block;
@@ -175,35 +179,35 @@ export default {
     width: 100px;
     height: 100px;
   }
-  span>.left img{
+  span>.home_left img{
     display: block;
     position: absolute;
     top: 0;right: 0;bottom: 0;left: 0;
     margin: auto;
   }
-  span>.right{
+  span>.home_right{
     float: left;
     display: block;
     width: 150px;
     height: 100px;
     color: #fff;
   }
-  span>.right h1{
+  span>.home_right h1{
     font-size: 32px;
     margin-top: 15px;
     font-family: '';
   }
-  span>.right p{
+  span>.home_right p{
     font-size: 13px;
   }
-  .down{
+  .home_down{
     width: 100%;
     /* height: 400px; */
     /* background: skyblue; */
     margin-top: 30px;
     z-index: -10;
   }
-  .down .head{
+  .home_down .home_head{
     position: relative;
     overflow: hidden;
     width: 100%;
@@ -211,7 +215,7 @@ export default {
     background: #323232;
     border-radius: 8px;
   }
-  .down .head>span{
+  .home_down .home_head>span{
     position: absolute;
     display: block;
     width: 96%;
@@ -226,7 +230,7 @@ export default {
     line-height: 24px;
     padding-left: 32px;
   }
-  .down table{
+  .home_down table{
     width: 100%;
     height: 100px;
     background: #ccc;

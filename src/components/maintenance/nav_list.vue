@@ -245,6 +245,7 @@ export default {
     /* overflow: hidden; */
     min-height: 100%;
     width: 100%;
+    background: #ECECEC;
     /* height: 100%; */
 }
 .left {
@@ -353,12 +354,12 @@ export default {
 .right {
     box-sizing: border-box;
     width: 100%;
-    min-height: 100%;
-    margin-left: 200px;
+    height: 100%;
+    /* margin-left: 200px; */
     /* height: 100%; */
     /* position: absolute; */
     position: relative;
-    /* padding-left: 120px; */
+    padding-left: 200px;
     padding-top: 60px;
     top: 0px;
     background: #ECECEC;
