@@ -15,27 +15,27 @@
                 <el-table-column
                   prop="node_name"
                   label="节点名称"
-                  width="240">
+                  min-width="20%">
                 </el-table-column>
                 <el-table-column
                   prop="node_id"
                   label="节点ID"
-                  width="240">
+                  min-width="20%">
                 </el-table-column>
                 <el-table-column
                   prop="node_num"
                   label="所属机构"
-                  width="240">
+                  min-width="20%">
                 </el-table-column>
                 <el-table-column
                   prop="block_num"
                   label="状态"
-                  width="240">
+                  min-width="20%">
                 </el-table-column>
                 <el-table-column
                   prop="business_num"
                   label="配置信息"
-                  width="240">
+                  min-width="20%">
                 </el-table-column>
                 
               </el-table>

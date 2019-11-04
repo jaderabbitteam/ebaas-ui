@@ -15,31 +15,32 @@
                 <el-table-column
                   prop="news_content"
                   label="消息内容"
-                  width="600">
+                  min-width="50%">
                 </el-table-column>
                 <el-table-column
                   prop="news_time"
                   label="接收时间"
-                  width="120">
+                  min-width="10%">
                 </el-table-column>
                 <el-table-column
                   prop="news_style"
                   label="消息类型"
-                  width="120">
+                  min-width="10%">
                 </el-table-column>
                 <el-table-column
                   prop="salesman"
                   label="业务员"
-                  width="120">
+                  min-width="10%">
                 </el-table-column>
                 <el-table-column
                   prop="news_state"
                   label="状态"
-                  width="120">
+                  min-width="10%">
                 </el-table-column>
                 <el-table-column
                   prop="news_operation"
-                  label="操作">
+                  label="操作"
+                  min-width="10%">
                 </el-table-column>
                 
               </el-table>

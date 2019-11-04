@@ -44,45 +44,46 @@
                 <el-table-column
                   prop="link_name"
                   label="链名称"
-                  width="180">
+                  min-width="15%">
                 </el-table-column>
                 <el-table-column
                   prop="link_id"
                   label="链ID"
-                  width="180">
+                  min-width="15%">
                 </el-table-column>
                 <el-table-column
                   prop="node_num"
                   label="节点数"
-                  width="120">
+                  min-width="12%">
                 </el-table-column>
                 <el-table-column
                   prop="block_num"
                   label="区块数"
-                  width="120">
+                  min-width="12%">
                 </el-table-column>
                 <el-table-column
                   prop="business_num"
                   label="交易数"
-                  width="120">
+                  min-width="12%">
                 </el-table-column>
                 <el-table-column
                   prop="TPS"
                   label="TPS"
-                  width="120">
+                  min-width="12%">
                 </el-table-column>
                 <el-table-column
                   prop="business_num_today"
                   label="今日交易数"
-                  width="120">
+                  min-width="12%">
                 </el-table-column>
                 <el-table-column
                   prop="link_state"
                   label="链状态"
-                  width="120">
+                  min-width="12%">
                 </el-table-column>
                 <el-table-column
-                  label="操作">
+                  label="操作"
+                  min-width="12%">
                   <template slot-scope="scope">
                     <el-button @click="handleClick(scope.row)" type="text" size="small"> <router-link to="../maintenance/link_info">查看</router-link></el-button>
                   </template>

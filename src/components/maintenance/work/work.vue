@@ -20,22 +20,22 @@
                 <el-table-column
                   prop="work_name"
                   label="名称"
-                  width="300">
+                  min-width="25%">
                 </el-table-column>
                 <el-table-column
                   prop="work_describe"
                   label="描述"
-                  width="300">
+                  min-width="25%">
                 </el-table-column>
                 <el-table-column
                   prop="work_state"
                   label="状态"
-                  width="300">
+                  min-width="25%">
                 </el-table-column>
                 <el-table-column
                   prop="work_operation"
                   label="操作"
-                  width="300">
+                  min-width="25%">
                 </el-table-column>
               </el-table>
         </div>

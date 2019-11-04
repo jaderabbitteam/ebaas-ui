@@ -20,22 +20,22 @@
                 <el-table-column
                   prop="start_ip"
                   label="开始ip地址"
-                  width="300">
+                  min-width="25%">
                 </el-table-column>
                 <el-table-column
                   prop="end_id"
                   label="结束ip地址"
-                  width="300">
+                  min-width="25%">
                 </el-table-column>
                 <el-table-column
                   prop="mark"
                   label="备注"
-                  width="300">
+                  min-width="25%">
                 </el-table-column>
                 <el-table-column
                   prop="operation"
                   label="操作"
-                  width="300">
+                  min-width="25%">
                 </el-table-column>
               </el-table>
         </div>
