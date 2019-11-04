@@ -23,36 +23,37 @@
                 <el-table-column
                   prop="link_name"
                   label="链名称"
-                  width="242">
+                  min-width="20%">
                 </el-table-column>
                 <el-table-column
                   prop="link_id"
                   label="链ID"
-                  width="152">
+                  min-width="12%">
                 </el-table-column>
                 <el-table-column
                   prop="node_num"
                   label="节点数"
-                  width="152">
+                   min-width="12%">
                 </el-table-column>
                 <el-table-column
                   prop="link_state"
                   label="链状态"
-                  width="152">
+                   min-width="12%">
                 </el-table-column>
                 <el-table-column
                   prop="user_num"
                   label="成员数"
-                  width="152">
+                   min-width="12%">
                 </el-table-column>
                 <el-table-column
                   prop="link_code"
                   label="链码"
-                  width="152">
+                   min-width="12%">
                 </el-table-column>
                 <el-table-column
                   prop="link_operation"
-                  label="操作">
+                  label="操作"
+                   min-width="12%">
                 </el-table-column>
               </el-table>
         </div>
