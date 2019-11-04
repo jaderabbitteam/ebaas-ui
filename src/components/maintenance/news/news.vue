@@ -75,7 +75,8 @@ export default {
     widows: 90%;
     height: 100%;
     /* width: 65%; */
-    margin: 3% 5%;
+    margin: 3% 5% 0;
+    padding-bottom: 30px;
     /* background: #f2f; */
   }
   .top{

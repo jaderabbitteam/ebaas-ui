@@ -117,7 +117,8 @@ export default {
   .ency_banner{
     widows: 90%;
     /* height: 500px; */
-    margin: 3% 5%;
+    margin: 3% 5% 0;
+    padding-bottom: 30px
     /* background: #f2f; */
   }
   .top{
