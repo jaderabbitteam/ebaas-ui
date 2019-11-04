@@ -13,7 +13,7 @@
             <p>节点：&nbsp;183.6.121.188:19281</p>
             <p>排序节点：&nbsp;127.0.0.1:7050</p>
             <p>共识算法：&nbsp;solo</p>
-            <p><a href="#">认识共识算法</a></p>
+            <p><router-link to="../maintenance/algorithm_introduction">认识共识算法</router-link></p>
             <p>简介：&nbsp;solo共识算法非常简单，单点共识解决方案。它接受交易，对其进行排序，然后生成块，进行上链</p>
             <img src="../../../../static/images/solo.png" alt="" width="90%">
 

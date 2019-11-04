@@ -14,6 +14,7 @@ import development from '@/components/maintenance/cog/development'
 import news from '@/components/maintenance/news/news'
 import manage from '@/components/maintenance/user_manage/user_manage'
 import link_info from '@/components/maintenance/home/link_info/link_info'
+import algorithm_introduction from '@/components/maintenance/cog/algorithm_introduction/algorithm_introduction'
 
 Vue.use(Router)
 
@@ -99,6 +100,12 @@ export default new Router({
       component: link_info,
       meta: {
         title: '易链EbaaS - 业务链管理'
+      }
+    }, {
+      path: 'algorithm_introduction',
+      component: algorithm_introduction,
+      meta: {
+        title: '易链EbaaS - 共识算法介绍'
       }
     }]
   }
