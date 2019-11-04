@@ -82,8 +82,10 @@
                   width="120">
                 </el-table-column>
                 <el-table-column
-                  prop="operation"
                   label="操作">
+                  <template slot-scope="scope">
+                    <el-button @click="handleClick(scope.row)" type="text" size="small"> <router-link to="../maintenance/link_info">查看</router-link></el-button>
+                  </template>
                 </el-table-column>
               </el-table>
         </div>
@@ -105,7 +107,6 @@ export default {
             TPS: '0',
             business_num_today: '0',
             link_state: '已开通',
-            operation: '查看'
           },{
             link_name: 'syschannel',
             link_id: 'syschannel',
@@ -115,7 +116,6 @@ export default {
             TPS: '3',
             business_num_today: '0',
             link_state: '已开通',
-            operation: '查看'
           },
           {
             link_name: 'testsys',
@@ -126,7 +126,6 @@ export default {
             TPS: '1',
             business_num_today: '0',
             link_state: '已开通',
-            operation: '查看'
           }]
         }
   }
@@ -244,5 +243,11 @@ export default {
   }
   .cell{
     text-align: center;
+  }
+  a{
+    color: #0000EE;
+  }
+  a:active{
+    color: #FF0000;
   }
 </style>
