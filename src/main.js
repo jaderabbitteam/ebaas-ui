@@ -2,15 +2,13 @@ import Vue from 'vue'
 import App from './App'
 import router from './router'
 import VueWechatTitle from 'vue-wechat-title'
-import { 
-  Table,
-  TableColumn
- } from 'element-ui'
+import axios from 'axios'
+import ElementUi from 'element-ui'
+import 'element-ui/lib/theme-chalk/index.css'
 Vue.use(VueWechatTitle)
+Vue.prototype.$axios = axios
 
-Vue.use(Table)
-Vue.use(TableColumn)
-
+Vue.use(ElementUi)
 Vue.config.productionTip = false
 
 /* eslint-disable no-new */

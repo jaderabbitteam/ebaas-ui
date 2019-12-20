@@ -1,242 +1,124 @@
 <template>
-<div class="body_bg">
+  <el-container>
+    <el-header>
+      <img src="../../static/images/home-logo.png" alt="">
+    </el-header>
 
-    <header>
-        <img src="../../static/images/home-logo.png" alt="" width="180px">
-    </header>
+    <el-main>
+      <div class="title">
+        <p style="font-size:50px">构建安全、易用、高性能、可定制的区块链基础云服务平台</p>
+      </div>
+      <el-card class="box-card">
+        <h1 style="color:#fff;font-weight:500;margin-bottom:25px;font-size:20px">登录</h1>
 
-    <div class="content">
-        <div class="content_left">
-            <p>构建安全、易用、高性能、可定制的区块链基础云服务平台</p>
-        </div>
+        <el-form :model="loginForm" :rules="loginRules" ref="loginRef">
+          <el-form-item prop="userName">
+            <img src="../../static/images/user_login_icon.png" alt="">
+            <el-input v-model="loginForm.userName" placeholder="请输入您的用户名" style="width:85%;float:right;margin-right:7px;"></el-input>
+          </el-form-item>
 
-        <div class="content_right">
-            <h1>登录</h1>
-            <div class="form">
-                <form action="">
+          <el-form-item prop="userPassword">
+            <img src="../../static/images/user_psd_icon.png" alt="">
+            <el-input v-model="loginForm.userPassword" type="password" placeholder="请输入您的密码" style="width:85%;float:right;margin-right:7px;"></el-input>
+          </el-form-item>
 
-                    <div class="username">
-                        <img src="../../static/images/user_login_icon.png" alt="">
-                        <input type="text" placeholder="请输入您的用户名" v-model="userName">
-                    </div>
-
-                    <div class="password">
-                        <img src="../../static/images/user_psd_icon.png" alt="">
-                        <input type="password" placeholder="请输入您的密码" v-model="passWord">
-                    </div>
-
-                    <div @click="login" class="submit">
-                        <input type="submit" value="立即登陆">
-                        <p v-if="show_1">账号密码错误，登录失败</p>
-                        <p v-if="show_2">账号密码为空，登陆失败</p>
-                    </div>
-
-                    <div class="register">
-                        <a href="#">立即注册</a>
-                    </div>
-                </form>
-            </div>
-        </div>
-    </div>
-
-</div>
+          <el-form-item>
+            <el-button type="primary" style="width:95.5%;margin-left:7px;" @click="submit">登录</el-button>
+          </el-form-item>
+          <div class="logon_link">
+            <el-link href="#" type="info" style="color:#fff;">注册账号</el-link>
+          </div>
+        </el-form>
+      </el-card>
+    </el-main>
+  </el-container>
 </template>
 
 <script>
 import {
-    api
+  api
 } from '@/services'
 
 export default {
-    name: 'index',
-    data() {
-        return {
-            userName: "",
-            passWord: "",
-            show_1: false,
-            show_2: false
-        }
-    },
-    methods: {
-        async login() {
-            if (this.userName == "") {
-                this.show_1 = false;
-                this.show_2 = true;
-                return
-            }
-
-            const data = await api.user(this.userName, this.passWord).catch(err => {
-                console.log(err)
-
-                return null
-            })
-            if(data){
-                console.log('成功');
-                location.href = 'http://localhost:8080/?#/maintenance/home';
-                
-            }
-            else{
-                console.log('失败');
-                this.show_2 = false;
-                this.show_1 = true;
-                
-            }
-            // console.log(data)
-            // console.log(data.txID)
-        }
+  name: 'index',
+  data () {
+    return {
+      loginForm: {
+        userName: '',
+        userPassword: ''
+      },
+      loginRules: {
+        userName: [
+          {required: true, message: '用户名不能为空！'}
+        ],
+        userPassword: [
+          {required: true, message: '密码不能为空！'}
+        ]
+      }
     }
+  },
+  methods: {
+    async submit () {
+      this.$refs.loginRef.validate(isOK => isOK ? console.log('该登录了') : null)
+      const data = await api.user(this.loginForm.userName, this.loginForm.userPassword).catch(err => {
+        console.log(err)
+        return null
+      })
+      data ? this.$router.push('/maintenance') : this.$message.error({
+        dangerouslyUseHTMLString: true,
+        message: '<strong style="font-size:30px">登陆失败，请检查用户名密码是否正确</strong>'
+      })
+    }
+  }
 }
 </script>
 
-<style>
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+<style scoped>
+.el-container{
+  height: 100vh;
+  min-width: 1180px;
+  background: url('../../static/images/mws-body-bg-login.png') no-repeat;
+  background-size: cover;
 }
-
-.body_bg {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background: url("../../static/images/mws-body-bg-login.png") no-repeat;
-    background-size: cover;
-}
-
-.body_bg header {
-    float: left;
-}
-
-.body_bg header img {
+.el-header img{
     display: block;
-    margin-top: 20px;
-    margin-left: 30px;
+  height: 37px;
+  margin: 18px 5px;
 }
-
-.body_bg .content {
-    position: absolute;
-    overflow: hidden;
-    width: 100%;
-    height: 100%;
-
+.el-main{
+  display: flex;
+  align-content:center;
+  margin-top: 150px;
 }
-
-.body_bg .content .content_left {
-    position: absolute;
-    width: 45%;
-    height: 50%;
-    margin-left: 12%;
-    margin-top: 18%;
-    overflow: hidden;
-    font: 50px "微软雅黑";
-    line-height: 70px;
-    font-weight: 500;
-    color: #fff;
+.title{
+  position: relative;
+  flex: 2.3;
+  height: 440px;
+  text-align: center;
+  color: #fff;
 }
-
-.body_bg .content .content_right {
-    position: absolute;
-    width: 400px;
-    height: 400px;
-    margin-left: 60%;
-    margin-top: 13%;
-    background: #0D4A99;
-    padding: 10px 20px;
-    border-radius: 4px;
+.title p{
+  position: absolute;
+  display: block;
+  width: 75%;
+  height: 140px;
+  top: 0;right: 0;bottom: 0;left: 0;
+  margin: auto;
 }
-
-.body_bg .content .content_right h1 {
-    color: #fff;
-    font-size: 24px;
-    font-weight: 500;
+.box-card{
+  flex: 1;
+  height: 370px;
+  margin-right: 200px;
+  background: #0D4A99;
+  border: none;
 }
-
-.body_bg .content .content_right form {
-    line-height: 70px;
+.logon_link{
+  text-align: center;
+  font-size: 20px;
+  height: 30px;
 }
-
-.body_bg .content .content_right form .username,
-.body_bg .content .content_right form .password {
-    overflow: hidden;
-    display: flex;
-    margin-top: 30px;
-}
-
-.form img {
-    position: relative;
-    top: 7px;
-    width: 20px;
-    height: 25px;
-    margin-right: 10px;
-}
-
-/* .body_bg .content .content_right form .username img{
-    margin-top: 30px;
-} */
-
-.body_bg .content .content_right form .submit {
-    margin-top: 25px;
-    position: relative;
-    height: 50px;
-}
-
-.body_bg .content .content_right form .username input,
-.body_bg .content .content_right form .password input,
-.body_bg .content .content_right form .submit input {
-    width: 90%;
-    height: 50px;
-    background: #1C61B6;
-    border: none;
-    outline: none;
-    padding-left: 10px;
-    border-radius: 5px;
-    color: #fff;
-}
-
-.body_bg .content .content_right form .submit p {
-    height: 20px;
-    text-align: center;
-    color: red;
-    display: block;
-    line-height: 20px;
-    font-family: '微软雅黑';
-    font-size: 26px;
-    padding-top: 120px;
-}
-
-/* .body_bg .content .content_right form .username input {
-    margin-top: 30px;
-} */
-
-input::-webkit-input-placeholder {
-    color: #bbb;
-    font-size: 16px;
-}
-
-.body_bg .content .content_right form .submit input {
-    position: absolute;
-    top: 0;
-    height: 100%;
-    margin-left: 20px;
-    background: #109BBE;
-    font-size: 14px;
-    font-family: "微软雅黑";
-    cursor: pointer;
-}
-
-.body_bg .content .content_right form .register {
-    margin-top: 10px;
-    position: relative;
-    height: 50px;
-}
-
-.body_bg .content .content_right form .register a {
-    position: absolute;
-    top: 0;
-    line-height: 50px;
-    text-align: center;
-    margin-left: 44%;
-    color: #fff;
-    font-size: 14px;
+.el-form-item__content img{
+  margin-top: 7px;
+  margin-left: 7px;
 }
 </style>
