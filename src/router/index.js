@@ -19,95 +19,100 @@ import algorithm_introduction from '@/components/maintenance/cog/algorithm_intro
 Vue.use(Router)
 
 export default new Router({
-  routes: [{
-    path: '/login',
-    name: 'index',
-    component: index
-  },
-  {
-    path: '/maintenance',
-    name: 'nav_list',
-    component: list,
-    children: [{
-      path: 'home',
-      component: home,
-      meta: {
-        title: '易链EBaaS - 运维主页'
-      }
-
-    }, {
-      path: 'link',
-      component: link,
-      meta: {
-        title: '易链EBaaS - 业务链管理'
-      }
-    }, {
-      path: 'work',
-      component: work,
-      meta: {
-        title: '易链EBaaS - 业务管理'
-      }
-    }, {
-      path: 'node_management',
-      component: management,
-      meta: {
-        title: '易链EbaaS - 节点管理'
-      }
-    }, {
-      path: 'white',
-      component: white,
-      meta: {
-        title: '易链EbaaS - 白名单'
-      }
-    }, {
-      path: 'black',
-      component: black,
-      meta: {
-        title: '易链EbaaS - 黑名单'
-      }
-    }, {
-      path: 'algorithm',
-      component: algorithm,
-      meta: {
-        title: '易链EbaaS - 链码打包、安装、升级说明'
-      }
-    }, {
-      path: 'encyclopedias',
-      component: encyclopedias,
-      meta: {
-        title: '易链EbaaS - 区块链百科'
-      }
-    }, {
-      path: 'development',
-      component: development,
-      meta: {
-        title: '易链EbaaS - 开发手册'
-      }
-    }, {
-      path: 'news',
-      component: news,
-      meta: {
-        title: '易链EbaaS - 业务员主页'
-      }
-    }, {
-      path: 'user_manage',
-      component: manage,
-      meta: {
-        title: '易链EbaaS - 用户管理'
-      }
-    }, {
-      path: 'link_info',
-      component: link_info,
-      meta: {
-        title: '易链EbaaS - 业务链管理'
-      }
-    }, {
-      path: 'algorithm_introduction',
-      component: algorithm_introduction,
-      meta: {
-        title: '易链EbaaS - 共识算法介绍'
-      }
-    }]
-  }
+  routes: [
+    {
+      path: '/',
+      redirect: 'login'
+    },
+    {
+      path: '/login',
+      name: 'index',
+      component: index
+    },
+    {
+      path: '/maintenance',
+      name: 'nav_list',
+      component: list,
+      redirect: '/maintenance/home',
+      children: [{
+        path: 'home',
+        component: home,
+        meta: {
+          title: '易链EBaaS - 运维主页'
+        }
+      }, {
+        path: 'link',
+        component: link,
+        meta: {
+          title: '易链EBaaS - 业务链管理'
+        }
+      }, {
+        path: 'work',
+        component: work,
+        meta: {
+          title: '易链EBaaS - 业务管理'
+        }
+      }, {
+        path: 'node_management',
+        component: management,
+        meta: {
+          title: '易链EbaaS - 节点管理'
+        }
+      }, {
+        path: 'white',
+        component: white,
+        meta: {
+          title: '易链EbaaS - 白名单'
+        }
+      }, {
+        path: 'black',
+        component: black,
+        meta: {
+          title: '易链EbaaS - 黑名单'
+        }
+      }, {
+        path: 'algorithm',
+        component: algorithm,
+        meta: {
+          title: '易链EbaaS - 链码打包、安装、升级说明'
+        }
+      }, {
+        path: 'encyclopedias',
+        component: encyclopedias,
+        meta: {
+          title: '易链EbaaS - 区块链百科'
+        }
+      }, {
+        path: 'development',
+        component: development,
+        meta: {
+          title: '易链EbaaS - 开发手册'
+        }
+      }, {
+        path: 'news',
+        component: news,
+        meta: {
+          title: '易链EbaaS - 业务员主页'
+        }
+      }, {
+        path: 'user_manage',
+        component: manage,
+        meta: {
+          title: '易链EbaaS - 用户管理'
+        }
+      }, {
+        path: 'link_info',
+        component: link_info,
+        meta: {
+          title: '易链EbaaS - 业务链管理'
+        }
+      }, {
+        path: 'algorithm_introduction',
+        component: algorithm_introduction,
+        meta: {
+          title: '易链EbaaS - 共识算法介绍'
+        }
+      }]
+    }
   ]
 })
