@@ -66,39 +66,39 @@ export default {
   name: 'link',
   data () {
     return {
-          tableData: [{
-            link_name: 'a',
-            link_id: 'a',
-            node_num: '1',
-            link_state: '已开通',
-            user_num: '1',
-            link_code: '查看',
-            link_operation: '查看'
-          },
-          {
-            link_name: 'syschannel',
-            link_id: 'syschannel',
-            node_num: '1',
-            link_state: '已开通',
-            user_num: '1',
-            link_code: '查看',
-            link_operation: '查看'
-          },
-          {
-            link_name: 'testsys',
-            link_id: 'testsys',
-            node_num: '1',
-            link_state: '已开通',
-            user_num: '1',
-            link_code: '查看',
-            link_operation: '查看'
-          }]
-        }
+      tableData: [{
+        link_name: 'a',
+        link_id: 'a',
+        node_num: '1',
+        link_state: '已开通',
+        user_num: '1',
+        link_code: '查看',
+        link_operation: '查看'
+      },
+      {
+        link_name: 'syschannel',
+        link_id: 'syschannel',
+        node_num: '1',
+        link_state: '已开通',
+        user_num: '1',
+        link_code: '查看',
+        link_operation: '查看'
+      },
+      {
+        link_name: 'testsys',
+        link_id: 'testsys',
+        node_num: '1',
+        link_state: '已开通',
+        user_num: '1',
+        link_code: '查看',
+        link_operation: '查看'
+      }]
+    }
   }
 }
 </script>
 
-<style scode>
+<style scoped>
   .home_body{
     background: #ECECEC;
   }

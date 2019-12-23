@@ -99,41 +99,41 @@ export default {
   name: 'home',
   data () {
     return {
-          tableData: [{
-            link_name: 'a',
-            link_id: 'a',
-            node_num: '1',
-            block_num: '0',
-            business_num: '0',
-            TPS: '0',
-            business_num_today: '0',
-            link_state: '已开通',
-          },{
-            link_name: 'syschannel',
-            link_id: 'syschannel',
-            node_num: '1',
-            block_num: '76',
-            business_num: '91',
-            TPS: '3',
-            business_num_today: '0',
-            link_state: '已开通',
-          },
-          {
-            link_name: 'testsys',
-            link_id: 'testsys',
-            node_num: '1',
-            block_num: '2',
-            business_num: '2',
-            TPS: '1',
-            business_num_today: '0',
-            link_state: '已开通',
-          }]
-        }
+      tableData: [{
+        link_name: 'a',
+        link_id: 'a',
+        node_num: '1',
+        block_num: '0',
+        business_num: '0',
+        TPS: '0',
+        business_num_today: '0',
+        link_state: '已开通'
+      }, {
+        link_name: 'syschannel',
+        link_id: 'syschannel',
+        node_num: '1',
+        block_num: '76',
+        business_num: '91',
+        TPS: '3',
+        business_num_today: '0',
+        link_state: '已开通'
+      },
+      {
+        link_name: 'testsys',
+        link_id: 'testsys',
+        node_num: '1',
+        block_num: '2',
+        business_num: '2',
+        TPS: '1',
+        business_num_today: '0',
+        link_state: '已开通'
+      }]
+    }
   }
 }
 </script>
 
-<style scode>
+<style scoped>
   .home_body{
     background: #ECECEC;
     height: 100%;

@@ -1,6 +1,6 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import index from '@/components/index'
+import login from '@/components/login'
 import list from '@/components/maintenance/nav_list'
 import home from '@/components/maintenance/home/home'
 import link from '@/components/maintenance/link/link'
@@ -26,8 +26,8 @@ export default new Router({
     },
     {
       path: '/login',
-      name: 'index',
-      component: index
+      name: 'login',
+      component: login
     },
     {
       path: '/maintenance',

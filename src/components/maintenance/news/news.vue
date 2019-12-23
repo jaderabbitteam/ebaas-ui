@@ -42,7 +42,7 @@
                   label="操作"
                   min-width="10%">
                 </el-table-column>
-                
+
               </el-table>
         </div>
    </div>
@@ -54,20 +54,20 @@ export default {
   name: 'news',
   data () {
     return {
-          tableData: [{
-            news_content: '',
-            news_time: '',
-            news_style: '',
-            salesman: '',
-            news_state: '',
-            news_operation:''
-          }]
-        }
+      tableData: [{
+        news_content: '',
+        news_time: '',
+        news_style: '',
+        salesman: '',
+        news_state: '',
+        news_operation: ''
+      }]
+    }
   }
 }
 </script>
 
-<style scode>
+<style scoped>
   .home_body{
     background: #ECECEC;
   }

@@ -11,11 +11,10 @@ export default {
     return {
 
     }
-          
   }
 }
 </script>
 
-<style scode>
+<style scoped>
 
 </style>

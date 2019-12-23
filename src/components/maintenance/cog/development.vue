@@ -124,7 +124,7 @@
             </p>
             <h5>2、创建链的创世块</h5>
             <p>
-              CORE_PEER_MSPCONFIGPATH=crypto-config/peerOrganizations/org1.example.com/users/Admin@org1.example.com/msp 
+              CORE_PEER_MSPCONFIGPATH=crypto-config/peerOrganizations/org1.example.com/users/Admin@org1.example.com/msp
               ./peer channel create -c syschannel -f syschannel.tx -o orderer.rabbit.com:7050
             </p>
             <p>
@@ -142,7 +142,7 @@
             </p>
             <h5>4、安装链码</h5>
             <p>
-              CORE_PEER_MSPCONFIGPATH=crypto-config/peerOrganizations/org1.example.com/users/Admin@org1.example.com/msp ./peer chaincode install 
+              CORE_PEER_MSPCONFIGPATH=crypto-config/peerOrganizations/org1.example.com/users/Admin@org1.example.com/msp ./peer chaincode install
               -n example -v 1.0 -p gitlab.com/jaderabbit/go-rabbit/chaincode/example
             </p>
             <p>
@@ -156,7 +156,7 @@
             </p>
             <h5>5、初始化链码</h5>
             <p>
-              CORE_PEER_MSPCONFIGPATH=crypto-config/peerOrganizations/org1.example.com/users/Admin@org1.example.com/msp ./peer chaincode 
+              CORE_PEER_MSPCONFIGPATH=crypto-config/peerOrganizations/org1.example.com/users/Admin@org1.example.com/msp ./peer chaincode
               instantiate -C syschannel -n example -v 1.0 -c '{"Args":["init","Org1MSP","install asset chaincode"]}' -o orderer.rabbit.com:7050
             </p>
             <p>
@@ -202,18 +202,18 @@ export default {
   name: 'development',
   data () {
     return {
-          tableData: [{
-            start_ip: 'peer1',
-            end_ip: 'Org1MSP',
-            mark: 'STARTED',
-            operation: '自定义配置'
-          }]
-        }
+      tableData: [{
+        start_ip: 'peer1',
+        end_ip: 'Org1MSP',
+        mark: 'STARTED',
+        operation: '自定义配置'
+      }]
+    }
   }
 }
 </script>
 
-<style scode>
+<style scoped>
   .home_body{
     background: #ECECEC;
   }

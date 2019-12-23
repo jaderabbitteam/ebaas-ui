@@ -1,6 +1,6 @@
 import { http } from '@/utils'
 
-const baseUrl = 'http://vwpwnu.natappfree.cc/v1'
+// const baseUrl = 'http://g7twgy.natappfree.cc/v1'
 
 export const user = (userName, passWord) => http.get(http.param(baseUrl + '/user/login/:userName/:passWord', {
   userName: userName,

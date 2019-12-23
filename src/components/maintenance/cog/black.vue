@@ -48,18 +48,18 @@ export default {
   name: 'black',
   data () {
     return {
-          tableData: [{
-            start_ip: 'peer1',
-            end_ip: 'Org1MSP',
-            mark: 'STARTED',
-            operation: '自定义配置'
-          }]
-        }
+      tableData: [{
+        start_ip: 'peer1',
+        end_ip: 'Org1MSP',
+        mark: 'STARTED',
+        operation: '自定义配置'
+      }]
+    }
   }
 }
 </script>
 
-<style scode>
+<style scoped>
   .home_body{
     background: #ECECEC;
   }
