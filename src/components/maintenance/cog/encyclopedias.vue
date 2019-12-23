@@ -17,7 +17,7 @@
               用于验证其信息的有效性（防伪）和生成下一个区块。
             </p>
             <p style="color:#008000">
-              狭义来讲，区块链是一种按照时间顺序将数据区块以顺序相连的方式组合成的一种链式数据结构， 
+              狭义来讲，区块链是一种按照时间顺序将数据区块以顺序相连的方式组合成的一种链式数据结构，
               并以密码学方式保证的不可篡改和不可伪造的分布式账本。
             </p>
             <p>
@@ -99,18 +99,18 @@ export default {
   name: 'encyclopedias',
   data () {
     return {
-          tableData: [{
-            start_ip: 'peer1',
-            end_ip: 'Org1MSP',
-            mark: 'STARTED',
-            operation: '自定义配置'
-          }]
-        }
+      tableData: [{
+        start_ip: 'peer1',
+        end_ip: 'Org1MSP',
+        mark: 'STARTED',
+        operation: '自定义配置'
+      }]
+    }
   }
 }
 </script>
 
-<style scode>
+<style scoped>
   .home_body{
     background: #ECECEC;
   }

@@ -40,7 +40,7 @@ import {
 } from '@/services'
 
 export default {
-  name: 'index',
+  name: 'login',
   data () {
     return {
       loginForm: {
@@ -64,6 +64,9 @@ export default {
         console.log(err)
         return null
       })
+
+      console.log(data)
+
       data ? this.$router.push('/maintenance') : this.$message.error({
         dangerouslyUseHTMLString: true,
         message: '<strong style="font-size:30px">登陆失败，请检查用户名密码是否正确</strong>'

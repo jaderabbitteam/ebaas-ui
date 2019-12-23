@@ -37,7 +37,7 @@
                   label="配置信息"
                   min-width="20%">
                 </el-table-column>
-                
+
               </el-table>
         </div>
    </div>
@@ -49,19 +49,19 @@ export default {
   name: 'node_management',
   data () {
     return {
-          tableData: [{
-            node_name: 'peer1',
-            node_id: 'peer1',
-            node_num: 'Org1MSP',
-            block_num: 'STARTED',
-            business_num: '自定义配置'
-          }]
-        }
+      tableData: [{
+        node_name: 'peer1',
+        node_id: 'peer1',
+        node_num: 'Org1MSP',
+        block_num: 'STARTED',
+        business_num: '自定义配置'
+      }]
+    }
   }
 }
 </script>
 
-<style scode>
+<style scoped>
   .home_body{
     background: #ECECEC;
   }

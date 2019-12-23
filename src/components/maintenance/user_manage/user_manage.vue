@@ -16,12 +16,11 @@
            <div class="user_change">
              <span>修改</span>
            </div>
-           
+
           </div>
-          
+
 
         </div>
-
 
         <div class="user_down">
           <div class="user_head">
@@ -48,8 +47,6 @@
 
           </div>
 
-          
-
         </div>
    </div>
 </div>
@@ -60,18 +57,18 @@ export default {
   name: 'user_manage',
   data () {
     return {
-          tableData: [{
-            start_ip: 'peer1',
-            end_ip: 'Org1MSP',
-            mark: 'STARTED',
-            operation: '自定义配置'
-          }]
-        }
+      tableData: [{
+        start_ip: 'peer1',
+        end_ip: 'Org1MSP',
+        mark: 'STARTED',
+        operation: '自定义配置'
+      }]
+    }
   }
 }
 </script>
 
-<style scode>
+<style scoped>
   .home_body{
     background: #ECECEC;
   }
@@ -240,6 +237,5 @@ export default {
     cursor: pointer;
     border-radius: 5px;
   }
-
 
 </style>

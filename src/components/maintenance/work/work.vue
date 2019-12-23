@@ -48,18 +48,18 @@ export default {
   name: 'work',
   data () {
     return {
-          tableData: [{
-            work_name: 'echain',
-            work_describe: 'The EBaaS basic business	',
-            work_state: '未开通	',
-            work_operation: '开通 升级'
-          }]
-        }
+      tableData: [{
+        work_name: 'echain',
+        work_describe: 'The EBaaS basic business	',
+        work_state: '未开通	',
+        work_operation: '开通 升级'
+      }]
+    }
   }
 }
 </script>
 
-<style scode>
+<style scoped>
   .home_body{
     background: #ECECEC;
   }
