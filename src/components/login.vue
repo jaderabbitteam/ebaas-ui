@@ -64,9 +64,8 @@ export default {
         console.log(err)
         return null
       })
-
       console.log(data)
-
+      this.$cookies.set('USERNAME',data.user_name);
       data ? this.$router.push('/maintenance') : this.$message.error({
         dangerouslyUseHTMLString: true,
         message: '<strong style="font-size:30px">登陆失败，请检查用户名密码是否正确</strong>'
@@ -85,7 +84,7 @@ export default {
 }
 .el-header img{
     display: block;
-  height: 37px;
+  /* height: 37px; */
   margin: 18px 5px;
 }
 .el-main{

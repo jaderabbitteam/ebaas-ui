@@ -41,9 +41,7 @@ export default {
 </script>
 
 <style scoped>
-  .home_body{
-    background: #ECECEC;
-  }
+  
   .alg_banner{
     widows: 90%;
     width: 65%;

@@ -28,10 +28,10 @@
         <el-col class="user_info">
           <img src="../../../../static/images/profile.jpg" alt="">
           <div class="text">
-            <p style="font-size:11px;color:#70edea;">欢迎</p>
+            <p style="font-size:11px;color:#70edea;">欢迎{{username}}</p>
             <p>
               <el-link style="font-size:11px;color:#FFF" type="info">修改密码</el-link>
-              <el-link style="font-size:11px;color:#FFF" type="info">退出</el-link>
+              <el-link style="font-size:11px;color:#FFF" type="info" @click="loginout">退出</el-link>
             </p>
           </div>
         </el-col>
@@ -43,7 +43,20 @@
 
 <script>
 export default {
-
+  data(){
+    return{
+      username:''
+    }
+   
+  },
+   created () {
+      this.username = this.$cookies.get('USERNAME');
+    },
+    methods:{
+      loginout(){
+        this.$router.push('/')
+      }
+    }
 }
 </script>
 
@@ -52,7 +65,7 @@ export default {
   height: 60px;
 }
 .header_left img{
-  height: 33px;
+  /* height: 33px; */
   margin-top: 5px;
 }
 .img_box{
@@ -79,7 +92,7 @@ export default {
   box-sizing: content-box;
 }
 .user_info .text{
-  width: 85px;
+  
   height: 32px;
   float: right;
 }

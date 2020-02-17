@@ -1,5 +1,5 @@
 import axios from 'axios'
-
+axios.defaults.withCredentials=true;
 /* eslint-disable */
 
 // flexible.js
@@ -39,7 +39,7 @@ import axios from 'axios'
 
     // reset rem unit on page resize
     window.addEventListener('resize', setRemUnit)
-    window.addEventListener('pageshow', function(e) {
+    window.addEventListener('pageshow', function (e) {
         if (e.persisted) {
             setRemUnit()
         }
@@ -91,7 +91,7 @@ http.interceptors.response.use(res => {
             try {
                 let d = JSON.parse(resData)
                 resData = d
-            } catch (e) {}
+            } catch (e) { }
         }
         return resData
     } else {
@@ -103,6 +103,7 @@ http.interceptors.response.use(res => {
             return Promise.reject(new Error('访问超时'))
         }
         if (~err.message.indexOf('Network Error')) {
+           
             return Promise.reject(new Error('网络错误'))
         }
     } else {

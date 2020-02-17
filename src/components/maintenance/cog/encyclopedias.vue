@@ -5,7 +5,7 @@
         <div class="ency_down">
           <div class="head">
             <span>
-              共识算法
+              区块链百科
             </span>
           </div>
           <div class="ency_content">
@@ -111,9 +111,7 @@ export default {
 </script>
 
 <style scoped>
-  .home_body{
-    background: #ECECEC;
-  }
+  
   .ency_banner{
     widows: 90%;
     /* height: 500px; */
