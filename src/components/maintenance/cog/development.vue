@@ -5,7 +5,7 @@
         <div class="dev_down">
           <div class="dev_head">
             <span>
-              共识算法
+              开发手册
             </span>
           </div>
           <div class="dev_content">
@@ -214,9 +214,7 @@ export default {
 </script>
 
 <style scoped>
-  .home_body{
-    background: #ECECEC;
-  }
+ 
   .dev_banner{
     widows: 90%;
     /* height: 500px; */

@@ -60,9 +60,7 @@ export default {
 </script>
 
 <style scoped>
-  .home_body{
-    background: #ECECEC;
-  }
+  
   .work_banner{
     widows: 90%;
     /* height: 500px; */

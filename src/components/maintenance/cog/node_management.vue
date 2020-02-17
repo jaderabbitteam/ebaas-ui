@@ -13,27 +13,28 @@
                 border
                 style="width: 100%">
                 <el-table-column
-                  prop="node_name"
+                  prop="name"
                   label="节点名称"
                   min-width="20%">
                 </el-table-column>
+                 <el-table-column prop="address" label="ip地址" min-width="20%"></el-table-column>
                 <el-table-column
-                  prop="node_id"
+                  prop="id"
                   label="节点ID"
                   min-width="20%">
                 </el-table-column>
                 <el-table-column
-                  prop="node_num"
+                  prop="orgName"
                   label="所属机构"
                   min-width="20%">
                 </el-table-column>
                 <el-table-column
-                  prop="block_num"
+                  prop="status"
                   label="状态"
                   min-width="20%">
                 </el-table-column>
                 <el-table-column
-                  prop="business_num"
+                  prop="info"
                   label="配置信息"
                   min-width="20%">
                 </el-table-column>
@@ -45,26 +46,35 @@
 </template>
 
 <script>
+import {
+  api
+} from '@/services'
 export default {
   name: 'node_management',
   data () {
     return {
-      tableData: [{
-        node_name: 'peer1',
-        node_id: 'peer1',
-        node_num: 'Org1MSP',
-        block_num: 'STARTED',
-        business_num: '自定义配置'
-      }]
+      tableData: []
     }
+  },
+  created(){
+    api.getChannel().then(data => {
+      let arr = [];
+      data.map(item=>{
+        arr = arr.concat(item.peers)
+      })
+      arr.map(item=>{
+        item.info = '自定义配置';
+      })
+      this.tableData = arr
+    },error=>{
+      this.$router.push('/')
+    });
   }
 }
 </script>
 
 <style scoped>
-  .home_body{
-    background: #ECECEC;
-  }
+  
   .node_banner{
      widows: 90%;
     /* height: 500px; */

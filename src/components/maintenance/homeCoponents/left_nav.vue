@@ -12,9 +12,9 @@
       <el-menu-item index="node_management">节点管理</el-menu-item>
       <el-menu-item index="black">黑名单</el-menu-item>
       <el-menu-item index="white">白名单</el-menu-item>
-      <el-menu-item index="algorithm">共识算法</el-menu-item>
+      <!-- <el-menu-item index="algorithm">共识算法</el-menu-item>
       <el-menu-item index="encyclopedias">区块链百科</el-menu-item>
-      <el-menu-item index="development">开发手册</el-menu-item>
+      <el-menu-item index="development">开发手册</el-menu-item> -->
     </el-submenu>
 
     <el-menu-item class="addBorder" index="link">
@@ -22,10 +22,10 @@
       业务链管理
       </el-menu-item>
 
-    <el-menu-item class="addBorder" index="work">
+    <!-- <el-menu-item class="addBorder" index="work">
       <img src="../../../../static/images/applications.png" alt="">
       业务管理
-      </el-menu-item>
+      </el-menu-item> -->
   </el-menu>
 </template>
 
