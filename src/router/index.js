@@ -38,80 +38,80 @@ export default new Router({
         path: 'home',
         component: home,
         meta: {
-          title: '7GEBaaS - 运维主页'
+          title: 'EBaaS - 运维主页'
         }
       }, {
         path: 'link',
         component: link,
         meta: {
-          title: '7GEBaaS - 业务链管理'
+          title: 'EBaaS - 业务链管理'
         }
       }, {
         path: 'work',
         component: work,
         meta: {
-          title: '7GEBaaS - 业务管理'
+          title: 'EBaaS - 业务管理'
         }
       }, {
         path: 'node_management',
         component: management,
         meta: {
-          title: '7GEbaaS - 节点管理'
+          title: 'EBaaS - 节点管理'
         }
       }, {
         path: 'white',
         component: white,
         meta: {
-          title: '7GEbaaS - 白名单'
+          title: 'EBaaS - 白名单'
         }
       }, {
         path: 'black',
         component: black,
         meta: {
-          title: '7GEbaaS - 黑名单'
+          title: 'EBaaS - 黑名单'
         }
       }, {
         path: 'algorithm',
         component: algorithm,
         meta: {
-          title: '7GEbaaS - 链码打包、安装、升级说明'
+          title: 'EBaaS - 链码打包、安装、升级说明'
         }
       }, {
         path: 'encyclopedias',
         component: encyclopedias,
         meta: {
-          title: '7GEbaaS - 区块链百科'
+          title: 'EBaaS - 区块链百科'
         }
       }, {
         path: 'development',
         component: development,
         meta: {
-          title: '7GEbaaS - 开发手册'
+          title: 'EBaaS - 开发手册'
         }
       }, {
         path: 'news',
         component: news,
         meta: {
-          title: '7GEbaaS - 业务员主页'
+          title: 'EBaaS - 业务员主页'
         }
       }, {
         path: 'user_manage',
         component: manage,
         meta: {
-          title: '7GEbaaS - 用户管理'
+          title: 'EBaaS - 用户管理'
         }
       }, {
         path: 'link_info',
         component: link_info,
         name:'link_info',
         meta: {
-          title: '7GEbaaS - 业务链管理'
+          title: 'EBaaS - 业务链管理'
         }
       }, {
         path: 'algorithm_introduction',
         component: algorithm_introduction,
         meta: {
-          title: '7GEbaaS - 共识算法介绍'
+          title: 'EBaaS - 共识算法介绍'
         }
       }]
     }
